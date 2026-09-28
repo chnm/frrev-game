@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Fr Rev Game" startnode="3" creator="Twine" creator-version="2.12.0" format="SugarCube" format-version="2.37.3" ifid="82d2fee6-bab5-4bdd-86ed-694046b2191b" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.def {
+	<tw-storydata name="Fr Rev Game" startnode="3" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="82d2fee6-bab5-4bdd-86ed-694046b2191b" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.def {
 	color: #6A499B;
 	font-weight:bold;
     /*text-decoration: underline dotted;*/
@@ -1292,9 +1292,8 @@ If you&#39;re ready to begin, [[click this link-&gt;12 July 1789]].
 If you&#39;d like a different character, you can refresh the game and start again.
 /*&lt;&lt;click &quot;click this link to try again&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Engine.play()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;.*/
 &lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="2" name="12 July 1789" tags="storyline" position="1250,350" size="100,100">/* NTS: broken, fix code &amp; scrap $decisions.push,  PRELUDE TO BASTILLE
+</tw-passagedata><tw-passagedata pid="2" name="12 July 1789" tags="storyline" position="1250,350" size="100,100">/* PRELUDE TO BASTILLE */
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;chunkText&gt;&gt;
 Since the Tennis Court Oath was sworn last month by the National Assembly tensions across the city have continued to rise. Food prices are still painfully high and the King has ordered troops to march from their normal barracks on the border to Paris. Rumors abound that these troops, mostly foreigners, are to put an end to the Revolution!
 &lt;br&gt;
 &lt;br&gt;
@@ -1302,30 +1301,57 @@ You are drawn outside on the morning of July 12th by a large commotion as people
 &lt;br&gt;
 &lt;br&gt;
 &lt;span id=&quot;decision&quot;&gt;Do you join the crowd?
-&lt;&lt;link &quot;Yes&quot;&gt;&gt;&lt;&lt;replace &quot;#decision&quot;&gt;&gt;&lt;&lt;set_repBefore to $reputation&gt;&gt;&lt;&lt;set $reputation to Math.clamp($reputation + 1)&gt;&gt;&lt;&lt;set $decisions.push({text: &quot;12 July 1789: joined the demonstrations at the Palais-Royal&quot;, repDelta: $reputation - _repBefore, repBefore: _repBefore})&gt;&gt;You let yourself be pulled by the current of people heading towards the Palais-Royal. When you arrive you hear various orators 
-condemning the dismissal of Necker and cries of &quot;To Arms! To arms!&quot; 
 &lt;br&gt;
-&lt;br&gt;
-Soon the crowd begins to move out into the streets and you follow. You see others plucking leaves from trees and placing them in their hats like green cockades.
-&lt;br&gt;
-&lt;&lt;link &quot;Stop and place a leaf in your hat&quot;&gt;&gt;&lt;&lt;set _repBefore to $reputation&gt;&gt;&lt;&lt;set $reputation to Math.clamp($reputation + 1)&gt;&gt;&lt;&lt;set $decisions.push({text: &quot;12 July 1789: Placed a leaf in your hat to make a green cockade&quot;, repDelta: $reputation - _repBefore, repBefore: _repBefore})&gt;&gt;You grab a leaf and fasion it jauntily on your hat, before rejoining the crowd.
-&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Keep moving&quot;&gt;&gt;
-&lt;&lt;set $decisions.push({text: &quot;12 July 1789: Did not add a green cockade to your hat&quot;, repDelta: 0, repBefore: $reputation})&gt;&gt; You keep your place in the crowd as the mass of people keeps moving.
-&lt;br&gt;
-&lt;br&gt;
-&lt;&lt;next&gt;&gt;
-The crowd arrives at the Place Louis XV on the western side of the Tuileries gardens by early evening. You can see further ahead that soldiers mounted on horses are also occupying the square. People mill about and you even spot two wax busts being hosted about. You can&#39;t make out any details, but a nearby crowd member tells you that they are of Jacques Necker and the King&#39;s cousin the duc d&#39;Orléans.
-&lt;br&gt;
-&lt;br&gt;
-After several hours of standoff between the crowd and soldiers, the cavalrymen form up and begin moving towards the crowd. Orders for the crowd to disperse as the soldiers move forward are met with stones thrown from the crowd.
-&gt;br&gt;
-&lt;&lt;link &quot;Start throwing rocks&quot;&gt;&gt;&lt;&lt;set _repBefore to $reputation&gt;&gt;&lt;&lt;set $reputation to Math.clamp($reputation + 2)&gt;&gt;&lt;&lt;set $decisions.push({text: &quot;12 July 1789: Threw rocks at soldiers&quot;, repDelta: $reputation - _repBefore, repBefore: _repBefore})&gt;&gt;You make your way towards a nearby construction site where demonstraters are collecting rocks to throw. Grabbing a handful of stones you begin hurling them into the mass of mounted soldiers. Your view is obsscured but soon your efforts prove successful and the soldiers retreat trying to shield their heads from the projectiles. Eventually the [[crowd disperses as night falls-&gt;14 July 1789]].
-&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Wait and see what happens&quot;&gt;&gt;&lt;&lt;set $decisions.push({text: &quot;12 July 1789: Did not throw rocks at soldiers&quot;, repDelta: 0, repBefore: $reputation})&gt;&gt;You decide it safest to not antogonize the soldiers and watch others hurl stones into their ranks. Soldiers try and shield themselves as they are pelted by dangerous projectiles. Their efforts prove successful as the soldiers pull back and leave the area. Eventually the [[crowd disperses as night falls-&gt;14 July 1789]].
-&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Leave in case any violence starts&quot;&gt;&gt;&lt;&lt;set _repBefore to $reputation&gt;&gt;&lt;&lt;set $reputation to Math.clamp($reputation - 1)&gt;&gt;&lt;&lt;set $decisions.push({text: &quot;12 July 1789: Left the crowd before confrontation&quot;, repDelta: $reputation - _repBefore, repBefore: _repBefore})&gt;&gt;You decide its best to do as the soldiers say before the violence escalates. You slip out of the crowd and try not to attract any attention as you [[make your way home-&gt;14 July 1789]].
-&lt;&lt;/link&gt;&gt;
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;No&quot;&gt;&gt;
-&lt;&lt;replace &quot;#decision&quot;&gt;&gt;&lt;&lt;set $decisions.push({text: &quot;12 July 1789: stayed home to avoid the demonstrations&quot;, repDelta: 0, repBefore: $reputation})&gt;&gt;You decide it is best not to get involved and spend the day focusing on your work. Although word reaches you of a confrontation between mounted soldiers and the crowd, [[you hope this will all blow over-&gt;14 July 1789]].
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/span&gt;&gt;&lt;&lt;/chunkText&gt;&gt;
+&lt;&lt;link &quot;Yes&quot;&gt;&gt;&lt;&lt;replace &quot;#decision&quot;&gt;&gt;
+	&lt;&lt;record-decision &quot;12 July 1789: joined the demonstrations at the Palais-Royal&quot; 0 1&gt;&gt;
+	You let yourself be pulled by the current of people heading towards the Palais-Royal. When you arrive you hear various orators condemning the dismissal of Necker and cries of &quot;To arms! To arms!&quot;
+	&lt;br&gt;
+	&lt;br&gt;
+	Soon the crowd begins to move out into the streets and you follow. You see others plucking leaves from trees and placing them in their hats like green cockades.
+	&lt;br&gt;
+	&lt;span id=&quot;cockade&quot;&gt;
+	&lt;&lt;link &quot;Stop and place a leaf in your hat&quot;&gt;&gt;&lt;&lt;replace &quot;#cockade&quot;&gt;&gt;
+		&lt;&lt;record-decision &quot;12 July 1789: placed a leaf in your hat to make a green cockade&quot; 0 1&gt;&gt;
+		You grab a leaf and fashion it jauntily on your hat, before rejoining the crowd.
+	&lt;&lt;/replace&gt;&gt;&lt;&lt;run $(&quot;#louisxv&quot;).show()&gt;&gt;&lt;&lt;/link&gt;&gt;
+	|
+	&lt;&lt;link &quot;Keep moving&quot;&gt;&gt;&lt;&lt;replace &quot;#cockade&quot;&gt;&gt;
+		&lt;&lt;record-decision &quot;12 July 1789: did not add a green cockade to your hat&quot; 0 0&gt;&gt;
+		You keep your place in the crowd as the mass of people keeps moving.
+	&lt;&lt;/replace&gt;&gt;&lt;&lt;run $(&quot;#louisxv&quot;).show()&gt;&gt;&lt;&lt;/link&gt;&gt;
+	&lt;/span&gt;
+	&lt;span id=&quot;louisxv&quot; style=&quot;display:none&quot;&gt;
+	&lt;br&gt;
+	&lt;br&gt;
+	The crowd arrives at the Place Louis XV on the western side of the Tuileries gardens by early evening. You can see further ahead that soldiers mounted on horses are also occupying the square. People mill about and you even spot two wax busts being hoisted about. You can&#39;t make out any details, but a nearby crowd member tells you that they are of Jacques Necker and the King&#39;s cousin the duc d&#39;Orléans.
+	&lt;br&gt;
+	&lt;br&gt;
+	After several hours of standoff between the crowd and soldiers, the cavalrymen form up and begin moving towards the crowd. Orders for the crowd to disperse as the soldiers move forward are met with stones thrown from the crowd.
+	&lt;br&gt;
+	&lt;span id=&quot;rocks&quot;&gt;
+	&lt;&lt;link &quot;Start throwing rocks&quot;&gt;&gt;&lt;&lt;replace &quot;#rocks&quot;&gt;&gt;
+		&lt;&lt;record-decision &quot;12 July 1789: threw rocks at soldiers&quot; 0 2&gt;&gt;
+		You make your way towards a nearby construction site where demonstrators are collecting rocks to throw. Grabbing a handful of stones you begin hurling them into the mass of mounted soldiers. Your view is obscured but soon your efforts prove successful and the soldiers retreat trying to shield their heads from the projectiles. Eventually the [[crowd disperses as night falls-&gt;14 July 1789]].
+	&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+	|
+	&lt;&lt;link &quot;Wait and see what happens&quot;&gt;&gt;&lt;&lt;replace &quot;#rocks&quot;&gt;&gt;
+		&lt;&lt;record-decision &quot;12 July 1789: did not throw rocks at soldiers&quot; 0 0&gt;&gt;
+		You decide it safest to not antagonize the soldiers and watch others hurl stones into their ranks. Soldiers try and shield themselves as they are pelted by dangerous projectiles. Their efforts prove successful as the soldiers pull back and leave the area. Eventually the [[crowd disperses as night falls-&gt;14 July 1789]].
+	&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+	|
+	&lt;&lt;link &quot;Leave in case any violence starts&quot;&gt;&gt;&lt;&lt;replace &quot;#rocks&quot;&gt;&gt;
+		&lt;&lt;record-decision &quot;12 July 1789: left the crowd before confrontation&quot; 0 -1&gt;&gt;
+		You decide it&#39;s best to do as the soldiers say before the violence escalates. You slip out of the crowd and try not to attract any attention as you [[make your way home-&gt;14 July 1789]].
+	&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+	&lt;/span&gt;
+	&lt;/span&gt;
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+|
+&lt;&lt;link &quot;No&quot;&gt;&gt;&lt;&lt;replace &quot;#decision&quot;&gt;&gt;
+	&lt;&lt;record-decision &quot;12 July 1789: stayed home to avoid the demonstrations&quot; 0 0&gt;&gt;
+	You decide it is best not to get involved and spend the day focusing on your work. Although word reaches you of a confrontation between mounted soldiers and the crowd, [[you hope this will all blow over-&gt;14 July 1789]].
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;/span&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="start" tags="FRANCIFIED" position="1075,200" size="100,100">PLACEHOLDER TEXT
 Bienvenue à la Révolution française!
 
@@ -1346,41 +1372,74 @@ Either [[create your character-&gt;identity]] or [[automatically generate a char
 
 &lt;&lt;next &quot;read your biography&quot; &quot;bio&quot;&gt;&gt;You are originally from &lt;&lt;set _origin = [&quot;Paris&quot;, &quot;the French countryside&quot;, &quot;another French town or city&quot;, &quot;the colonies&quot;, &quot;German speaking lands&quot;, &quot;Great Britain&quot;, &quot;Ireland&quot;, &quot;the Dutch Republic&quot;, &quot;the Italian peninsula&quot;, &quot;Poland&quot;, &quot;somewhere else&quot;]&gt;&gt;&lt;&lt;listbox &quot;$origin&quot;&gt;&gt;&lt;&lt;optionsfrom _origin&gt;&gt;&lt;&lt;/listbox&gt;&gt; and currently live in Paris, the greatest city in France. It is a diverse place, with people of all ages, origins, and socioeconomic statuses. The city is home to &lt;&lt;defNoble &quot;nobles&quot;&gt;&gt;, &lt;&lt;defArtisan &quot;artisans&quot;&gt;&gt;, &lt;&lt;defLawyer &quot;lawyers&quot;&gt;&gt;, and &lt;&lt;defMerchant &quot;merchants&quot;&gt;&gt;, who employ &lt;&lt;defLaborer &quot;laborers&quot;&gt;&gt; in their businesses. And there are also &lt;&lt;defBeggars &quot;beggars&quot;&gt;&gt; living across Paris&#39; twenty &lt;&lt;defQuarters &quot;quarters&quot;&gt;&gt;.
 
-It&#39;s a great city for &lt;&lt;set _socio = [&quot;laborers&quot;, &quot;servants&quot;, &quot;artisans&quot;, &quot;merchants&quot;, &quot;lawyers&quot;, &quot;nobles&quot;, &quot;beggars&quot;]&gt;&gt;&lt;&lt;listbox &quot;$socio&quot;&gt;&gt;&lt;&lt;optionsfrom _socio&gt;&gt;&lt;&lt;/listbox&gt;&gt; like you to live in. &lt;&lt;/chunkText&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="14 July 1789" tags="storyline" position="1075,475" size="100,100">STORMING OF THE BASTILLE - NTS: add female family member pull code &amp; precise bread weight, or if female they go to market and discover the price
+It&#39;s a great city for &lt;&lt;set _socio = [&quot;laborers&quot;, &quot;servants&quot;, &quot;artisans&quot;, &quot;merchants&quot;, &quot;lawyers&quot;, &quot;nobles&quot;, &quot;beggars&quot;]&gt;&gt;&lt;&lt;listbox &quot;$socio&quot;&gt;&gt;&lt;&lt;optionsfrom _socio&gt;&gt;&lt;&lt;/listbox&gt;&gt; like you to live in. &lt;&lt;/chunkText&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="14 July 1789" tags="storyline" position="1075,475" size="100,100">/* STORMING OF THE BASTILLE - NTS: add female family member pull code &amp; precise bread weight, or if female they go to market and discover the price */
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;chunkText&gt;&gt;
-Since demonstrations began two days ago Paris has been consumed by riotous crowds. Yesterday you &lt;&lt;if $reputation gte 12&gt;&gt;joined in with the crowds in search of weapons, but were unable to find any. Other groups broke into the Invalides and convent of Saint-Lazare, but found no weapons. Many are worried that the army will be turned on the city and that without arms they will be slaughtered.&lt;&lt;else&gt;&gt;tried to go about your normal business amidst the blaring tocsin and chaos.
+&lt;&lt;set _joined12July to $decisions.some(d =&gt; d.text.includes(&quot;joined the demonstrations at the Palais-Royal&quot;))&gt;&gt;
+&lt;&lt;set _poor to $socio isnot &quot;nobles&quot; and $socio isnot &quot;merchants&quot;&gt;&gt;
+Since demonstrations began two days ago Paris has been consumed by riotous crowds. Yesterday you
+&lt;&lt;if _joined12July&gt;&gt;
+	joined in with the crowds in search of weapons, but were unable to find any. Other groups broke into the Invalides and convent of Saint-Lazare, but found no weapons. Many are worried that the army will be turned on the city and that without arms they will be slaughtered.
+&lt;&lt;else&gt;&gt;
+	tried to go about your normal business amidst the blaring tocsin and chaos.
+&lt;&lt;/if&gt;&gt;
 &lt;br&gt;
 &lt;br&gt;
-&lt;&lt;next&gt;&gt;
+In response to the chaos, city officials have formed a people&#39;s militia called the National Guard to protect Paris. Many have adopted their symbol, a red and blue cockade, as a way to show their allegiance to the growing patriotic movement among the crowds to replace the green cockades of the 12th.
 &lt;br&gt;
 &lt;br&gt;
-In response to the chaos, city officials have formed a people&#39;s militia called the National Guard to protect Paris. Many have adopted their symbol, a red and blue cockade, as a way to show their allegiance to the growing patriotic movement among the crowds to replace the green cockades of the 12th. Do you begin wearing a red and blue cockade?
-&lt;&lt;link &quot;Yes&quot;&gt;&gt;Reputation increase.&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;No&quot;&gt;&gt;Reputation decrease.&lt;&lt;/link&gt;&gt;
-/* NTS: if social strata not rich need to code */
-On the mornbing of the 14th, your PLACEHOLDER WIFE returns home from the market furious. The price of bread is 15 Sous a loaf, the highest it has been in decades. She encourages you to join the gathering crowds. Do you join?
-/* NTS: else */
-The crowds are gathering again, do you join? /* NTS: probably gender restricted choice b/c only 1 woman known to have participated */
-&lt;&lt;link &quot;Yes&quot;&gt;&gt;
+&lt;span id=&quot;cockade&quot;&gt;Do you begin wearing a red and blue cockade?
+&lt;br&gt;
+&lt;&lt;link &quot;Yes&quot;&gt;&gt;&lt;&lt;replace &quot;#cockade&quot;&gt;&gt;
+	&lt;&lt;record-decision &quot;14 July 1789: began wearing a red and blue cockade&quot; 0 1&gt;&gt;
+	You pin a red and blue cockade to your hat.
+&lt;&lt;/replace&gt;&gt;&lt;&lt;run $(&quot;#market&quot;).show()&gt;&gt;&lt;&lt;/link&gt;&gt;
+|
+&lt;&lt;link &quot;No&quot;&gt;&gt;&lt;&lt;replace &quot;#cockade&quot;&gt;&gt;
+	&lt;&lt;record-decision &quot;14 July 1789: refused to wear a red and blue cockade&quot; 0 -1&gt;&gt;
+	You decide not to wear the new colors.
+&lt;&lt;/replace&gt;&gt;&lt;&lt;run $(&quot;#market&quot;).show()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;/span&gt;
 
-&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;No&quot;&gt;&gt;You decide to not get involved. Rumors fly about, but by the end of the day it is clear that a mob attacked the Bastille and seized it. The sounds of gunfire in the early afternoon had alerted much of the city to the violence. Everyone seems to disagree about the details, but it is clear that soldiers opened fire on the crowd and a battle ensued. Eventually the people broke in and the fortress surrendered. Everyone you speak with also is certain that the Bastille&#39;s Governor, the Marquis de Launay, and the prévôt dès marchands, Jacques de Flesselles, were both killed. Their heads were then parraded around on pikes by the mob.
+&lt;span id=&quot;market&quot; style=&quot;display:none&quot;&gt;
 &lt;br&gt;
 &lt;br&gt;
-Rain that evening seems to cause the riots to peter out. But an air of fear and anger remains.
-&lt;&lt;/link&gt;&gt;
+&lt;&lt;if _poor and $gender is &quot;female&quot;&gt;&gt;
+	On the morning of the 14th, you go to the market and are furious to discover that the price of bread is 15 sous a loaf, the highest it has been in decades. The crowds are gathering again. Do you join them?
+&lt;&lt;elseif _poor and $gender is &quot;male&quot; and $relationship is &quot;married&quot;&gt;&gt;
+	On the morning of the 14th, your wife returns home from the market furious. The price of bread is 15 sous a loaf, the highest it has been in decades. She encourages you to join the gathering crowds. Do you join?
+&lt;&lt;else&gt;&gt;
+	The crowds are gathering again. Do you join?
+&lt;&lt;/if&gt;&gt;
+/* NTS: probably gender restricted choice b/c only 1 woman known to have participated */
+&lt;br&gt;
+&lt;span id=&quot;bastille&quot;&gt;
+&lt;&lt;link &quot;Yes&quot;&gt;&gt;&lt;&lt;replace &quot;#bastille&quot;&gt;&gt;
+	&lt;&lt;record-decision &quot;14 July 1789: joined the crowds that stormed the Bastille&quot; 0 1&gt;&gt;
+	PLACEHOLDER: storming of the Bastille text.
+&lt;&lt;/replace&gt;&gt;&lt;&lt;run $(&quot;#aftermath&quot;).show()&gt;&gt;&lt;&lt;/link&gt;&gt;
+|
+&lt;&lt;link &quot;No&quot;&gt;&gt;&lt;&lt;replace &quot;#bastille&quot;&gt;&gt;
+	&lt;&lt;record-decision &quot;14 July 1789: stayed away from the storming of the Bastille&quot; 0 0&gt;&gt;
+	You decide to not get involved. Rumors fly about, but by the end of the day it is clear that a mob attacked the Bastille and seized it. The sounds of gunfire in the early afternoon had alerted much of the city to the violence. Everyone seems to disagree about the details, but it is clear that soldiers opened fire on the crowd and a battle ensued. Eventually the people broke in and the fortress surrendered. Everyone you speak with also is certain that the Bastille&#39;s Governor, the Marquis de Launay, and the prévôt dès marchands, Jacques de Flesselles, were both killed. Their heads were then paraded around on pikes by the mob.
+	&lt;br&gt;
+	&lt;br&gt;
+	Rain that evening seems to cause the riots to peter out. But an air of fear and anger remains.
+&lt;&lt;/replace&gt;&gt;&lt;&lt;run $(&quot;#aftermath&quot;).show()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;/span&gt;
+&lt;/span&gt;
 
-&lt;br&gt;
-&lt;&lt;next&gt;&gt;
-&lt;br&gt;
-The next day a delegation of deputies from the National Assembly along with news that the King would order the army to withdraw are met with racous celebrations. You see people adding white stripes to their red and blue cockades to represent a reconciliation with the King.
+&lt;span id=&quot;aftermath&quot; style=&quot;display:none&quot;&gt;
 &lt;br&gt;
 &lt;br&gt;
-Two days later the King himself arrives and you grab a glimpse of his carriage through the crowd. Word spreads quickly that King is on the people&#39;s side and even affixed one of the new cockades to his own hat. Whatever revolutionary event is taking place, it is filling the people of Paris with hope.
+The next day a delegation of deputies from the National Assembly along with news that the King would order the army to withdraw are met with raucous celebrations. You see people adding white stripes to their red and blue cockades to represent a reconciliation with the King.
+&lt;br&gt;
+&lt;br&gt;
+Two days later the King himself arrives and you grab a glimpse of his carriage through the crowd. Word spreads quickly that the King is on the people&#39;s side and even affixed one of the new cockades to his own hat. Whatever revolutionary event is taking place, it is filling the people of Paris with hope.
 &lt;br&gt;
 &lt;br&gt;
 [[The world is changing-&gt;27 August 1789]].
-&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;/chunkText&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="400,25" size="100,100">&lt;&lt;set $money to 0&gt;&gt;
+&lt;/span&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="400,25" size="100,100">&lt;&lt;set $money to 0&gt;&gt;
 &lt;&lt;set $expenses to 0&gt;&gt;
 &lt;&lt;set $income to 0&gt;&gt;
 &lt;&lt;set $hoh to 0&gt;&gt;
